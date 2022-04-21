@@ -11,8 +11,13 @@ describe(Numbers_translator)do
       test = Numbers_translator.new
       expect(test.numbers_in_english(17)).to eq("seventeen")
     end
-    #   it("takes a number 20-99 and returns it in english") do
-    #   expect(test.numbers_in_english(17)).to eq("seventeen")
-    # end
+      it("takes a number 20-99 and returns it in english") do
+      test = Numbers_translator.new
+      expect(test.numbers_in_english(22)).to eq("twenty-two")
+    end
+    it("takes a number 100-119 and returns it in english") do
+      test = Numbers_translator.new
+      expect(test.numbers_in_english(119)).to eq("one-hundred nineteen")
+    end
   end
 end
