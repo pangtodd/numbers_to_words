@@ -15,13 +15,17 @@ describe(Numbers_translator)do
       test = Numbers_translator.new
       expect(test.numbers_in_english(22)).to eq("twenty-two")
     end
-    it("takes a number 100-119 and returns it in english") do
+    it("takes a number 100-999 with 'teen' numbers and returns it in english") do
       test = Numbers_translator.new
-      expect(test.numbers_in_english(119)).to eq("nine hundred nineteen")
+      expect(test.numbers_in_english(319)).to eq("three hundred nineteen")
     end
-    it("takes a number 120-200 and returns it in english") do
+    it("takes a number 100-999 with non-'teen' numbers and returns it in english") do
       test = Numbers_translator.new
-      expect(test.numbers_in_english(199)).to eq("one hundred ninety-nine")
+      expect(test.numbers_in_english(699)).to eq("six hundred ninety-nine")
+    end
+    it("takes a number 1000-9999 with'teen' numbers and returns it in english") do
+      test = Numbers_translator.new
+      expect(test.numbers_in_english(9319)).to eq("nine thousand three hundred nineteen")
     end
   end
 end
