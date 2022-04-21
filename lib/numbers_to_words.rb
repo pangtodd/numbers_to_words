@@ -23,6 +23,8 @@ class Numbers_translator
       "#{SINGLE_DIGITS.fetch(string_number[-3])} hundred #{TEENS.fetch(string_number.slice(-2..))}"
     elsif user_number<999
       "#{SINGLE_DIGITS.fetch(string_number[-3])} hundred #{DECAS.fetch(string_number[-2])}-#{ones}"
+    elsif user_number<9999 && (string_number[-2]) == "1"
+      "#{SINGLE_DIGITS.fetch(string_number[-4])} thousand #{SINGLE_DIGITS.fetch(string_number[-3])} hundred #{TEENS.fetch(string_number.slice(-2..))}"
     
     # elsif user_number<100
     #   (DECAS.fetch(string_number[0]))+"-"+(SINGLE_DIGITS.fetch(string_number[1]))
