@@ -27,5 +27,9 @@ describe(Numbers_translator)do
       test = Numbers_translator.new
       expect(test.numbers_in_english(9319)).to eq("nine thousand three hundred nineteen")
     end
+    it("takes a number 1000-999 with non-'teen' numbers and returns it in english") do
+      test = Numbers_translator.new
+      expect(test.numbers_in_english(1000)).to eq("one thousand")
+    end
   end
 end
